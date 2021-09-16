@@ -125,4 +125,7 @@ function seventhQuestion(){
   }
 }
 
-// John already had his questions in functions lol - min
+// John already had his questions in functions lol
+// also the functions are already called in the html
+// min was here
+
