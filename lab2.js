@@ -58,5 +58,67 @@ if(fifthOne.toLowerCase() == "no"){
     }    
 }
 
+function getUserName(){
 let userName = prompt('What is your name? ')
-    document.write('Welcome to my profile ' + userName);
+    return('Welcome to my profile ' + userName);
+}
+
+function sixthQuestion(){    
+    let correctAnswer = 7;
+    let numberOfChances = 4;
+    let userAnswer = '';
+    let userCorrect = false;
+
+        for(let i = 0; i < numberOfChances; i++) {
+            userAnswer = prompt("Guess a number between 1 and 10!");
+
+            if (userAnswer == correctAnswer) {
+                userCorrect = true;
+              alert("That's Correct! Great Job!")
+                break;             
+            }   else if (userAnswer < correctAnswer) {
+               alert("Sorry that's too low.");
+            }   else if (userAnswer > correctAnswer) {
+               alert("Sorry that's too high.");
+            }
+        }
+    }
+
+
+
+// This Guessing Game was taken from class for the completion of Lab 4
+    /* Our number guessing game */
+
+function seventhQuestion(){
+
+    let correctNumber = 39;
+    let numberOfGuesses = 4;
+    let userGuess = '';
+    let userIsCorrect = false;
+
+    // set up a loop, to see if they have guesses left.
+    // if user has answer over 4 times, or they have guessed correctly end the game
+    for (let i = 0; i < numberOfGuesses; i++) {
+    // get the users response
+    // if you do have guesses left, ask the question again. 
+    userGuess = prompt('Guess a number between 0 and 100');
+
+    if (userGuess == correctNumber) {
+        userIsCorrect = true;
+        alert('thats right!')
+        break;
+    } else if (userGuess > correctNumber){
+        alert('your too high');
+    } else if (userGuess < correctNumber){
+        alert('your too low');
+    }
+
+    if (!userIsCorrect) {
+        alert('You ran out of guesses')
+    } else {
+        alert('Great Job')
+    }
+    //
+
+    }
+}
